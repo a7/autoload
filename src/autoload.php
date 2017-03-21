@@ -20,6 +20,10 @@ function autoload( $directory, $recurse = false ) {
 		trigger_error( 'Using autoload for more than 5 directories is not recommended', E_USER_WARNING );
 	}
 
+	if ( $recurse_depth > 7 ) {
+		throw new \Exception( 'Maximum recurse depth reached for autoload.' );
+	}
+
 	// Get a listing of the current directory
 	$scanned_dir = scandir( $directory );
 
