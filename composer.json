@@ -14,9 +14,6 @@
 	"require": {
 		"php": ">=7.0"
 	},
-	"require-dev": {
-		"phpunit/phpunit": "*@stable"
-	},
 	"autoload": {
 		"files": [ "package.php" ]
 	}
