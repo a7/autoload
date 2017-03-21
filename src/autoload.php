@@ -6,6 +6,7 @@ namespace A7;
  * Recursively loads all php files in all subdirectories of the given path
  *
  * @param $directory
+ * @param $recurse 
  *
  * @throws \Exception
  */
