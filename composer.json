@@ -1,0 +1,23 @@
+{
+	"name": "a7/autoload",
+	"description": "Automatically and recursively require_once all files in a directory.",
+	"type": "library",
+	"license": "MIT",
+	"version": "2.0",
+	"authors": [
+		{
+			"name": "A7",
+			"email": "a7@fastmail.com",
+			"homepage": "https://github.com/a7"
+		}
+	],
+	"require": {
+		"php": ">=7.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "*@stable"
+	},
+	"autoload": {
+		"files": [ "package.php" ]
+	}
+}
