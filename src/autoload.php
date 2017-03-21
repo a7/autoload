@@ -6,24 +6,10 @@ namespace A7;
  * Recursively loads all php files in all subdirectories of the given path
  *
  * @param $directory
- * @param $recurse
  *
  * @throws \Exception
  */
-function autoload( $directory, $recurse = false ) {
-	static $recurse_depth = 0;
-
-	if ( true === $recurse ) {
-		$recurse_depth++;
-	}
-
-	if ( $recurse_depth > 10 ) {
-		trigger_error( 'Using autoload for more than 10 directories is not recommended', E_USER_WARNING );
-	}
-
-	if ( $recurse_depth > 15 ) {
-		throw new \Exception( 'Maximum recurse depth reached for autoload.' );
-	}
+function autoload( $directory ) {
 
 	// Get a listing of the current directory
 	$scanned_dir = scandir( $directory );
@@ -63,7 +49,7 @@ function autoload( $directory, $recurse = false ) {
 		// If it's a directory then recursively load it
 		if ( 'dir' === $filetype ) {
 
-			autoload( $real_path, true );
+			autoload( $real_path );
 		}
 
 		// If it's a file, let's try to load it
