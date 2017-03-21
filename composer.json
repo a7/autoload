@@ -3,7 +3,7 @@
 	"description": "Automatically and recursively require_once all php files in a given directory.",
 	"type": "library",
 	"license": "UNLICENSE",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"authors": [
 		{
 			"name": "A7",
