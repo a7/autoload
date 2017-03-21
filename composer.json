@@ -2,7 +2,7 @@
 	"name": "a7/autoload",
 	"description": "Automatically and recursively require_once all php files in a given directory.",
 	"type": "library",
-	"license": "MIT",
+	"license": "UNLICENSE",
 	"version": "2.0.1",
 	"authors": [
 		{
