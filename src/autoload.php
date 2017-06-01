@@ -60,11 +60,6 @@ function autoload( $directory ) {
 				continue;
 			}
 
-			// Don't load any files that are not the proper mime type
-			if ( 'text/x-php' !== mime_content_type( $real_path ) ) {
-				continue;
-			}
-
 			$filesize = filesize( $real_path );
 			// Don't include empty or negative sized files
 			if ( $filesize <= 0 ) {
