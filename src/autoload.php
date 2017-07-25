@@ -66,8 +66,8 @@ function autoload( $directory ) {
 				continue;
 			}
 
-			// Don't include files that are greater than 100kb
-			if ( $filesize > 100000 ) {
+			// Don't include files that are greater than 300kb
+			if ( $filesize > 300000 ) {
 				continue;
 			}
 
