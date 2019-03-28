@@ -14,11 +14,17 @@ Be sure to include the regular composer load file via `require( __DIR__ . '/vend
 
 Please note that although similarly named, this Autoload library is meant for loading all PHP files in a given directory. This does **NOT** function in the manner of the built-in PSR-4 PHP Autoloader. This is meant for PHP files which are just simple functions (i.e. not class based files)
 
-Simply load your desired `includes` or whatever directory by calling:
+Simply load your desired `src` or whatever directory by calling:
 
 ```
-\A7\autoload( __DIR__ . '\includes' );
+\A7\autoload( __DIR__ . '\src' );
 ```
+
+### Inclusion Notes
+Will throw exceptions if:
+* there are more than 250 files in a directory
+* any of the php files are larger than 300kb
+* any of the php files are negative filesize (indicates something really funky going on) 
 
 ## Caveats
 Since this is a recursive loader, you should be conscious of what you're placing in your autoloaded directory.
