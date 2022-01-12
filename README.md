@@ -9,6 +9,12 @@ Automatically load PHP files in the specified directory. Recursively.
 * Encourages using more files to more cleanly organize code into smaller logical chunks
 * Reduce git merge conflicts with other developers
 
+## Installation
+
+```
+composer require a7/autoload
+```
+
 ## Usage
 Be sure to include the regular composer load file via `require( __DIR__ . '/vendor/autoload.php' );`.
 
